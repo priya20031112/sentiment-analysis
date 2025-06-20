@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-brain"></i> Sentiment Analyzer</h1>
+            <p class="subtitle">Detect emotions in your text with AI-powered analysis</p>
+        </header>
+        
+        <div class="input-section">
+            <textarea id="text-input" placeholder="Enter your text here to analyze its sentiment..."></textarea>
+            <button id="analyze-btn">Analyze Sentiment</button>
+        </div>
+        
+        <div id="result-section" class="hidden">
+            <h2>Analysis Result</h2>
+            <div class="sentiment-display">
+                <div class="sentiment-bar">
+                    <div class="sentiment-fill" id="sentiment-fill"></div>
+                </div>
+                <div class="sentiment-labels">
+                    <span class="sentiment-label">Negative</span>
+                    <span class="sentiment-label">Neutral</span>
+                    <span class="sentiment-label">Positive</span>
+                </div>
+            </div>
+            <div id="sentiment-details">
+                <p><strong>Sentiment:</strong> <span id="sentiment-text"></span></p>
+                <p><strong>Confidence:</strong> <span id="confidence-text"></span></p>
+                <div id="highlighted-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/compromise"></script>
+    <script src="script.js"></script>
+</body>
+</html>
